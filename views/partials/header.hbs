@@ -1,0 +1,14 @@
+<header>
+   <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      {{#if isLoggedIn}}
+      <li><a href="/account">My Account</a></li>
+      <li><a href="/staff">Staff</a></li>
+      <li><a href="/logout">Logout</a></li>
+      {{else}}
+      <li><a href="/login">Login</a></li>
+      <li><a href="/register">Register</a></li>
+      {{/if}}
+   </ul>
+</header>
