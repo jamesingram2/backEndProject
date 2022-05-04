@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const userStatus = require("../middleware/userStatus");
+const Record = require("../models/Record");
 
 // GET home page
-router.get("/", userStatus, (req, res) => {
-   res.render("index", { title: "Home", isLoggedIn: req.isLoggedIn });
+router.get("/", userStatus, async (req, res) => {
+   const records = await Record.find().lean();
+   res.render("index", { title: "Home", isLoggedIn: req.isLoggedIn, records });
 });
 
 // GET about page

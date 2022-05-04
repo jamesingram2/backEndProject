@@ -1,0 +1,24 @@
+<h1>Add a Record</h1>
+   <div class="form">
+      <form action="/staff/addRecord" method="POST">
+         <label for="recordId">Record number:</label><br>
+         <input type="text" id="recordId" name="recordId"><br>
+         <label for="title">Title:</label><br>
+         <input type="text" id="title" name="title"><br>
+         <label for="author">Author:</label><br>
+         <input type="text" id="author" name="author"><br>
+         <label for="subject">Subject:</label><br>
+         <input type="text" id="subject" name="subject"><br>
+         <label for="format">Format:</label><br>
+         <input type="text" id="format" name="format"><br>
+         <label for="classification">Classification:</label><br>
+         <input type="text" id="classification" name="classification"><br>
+         <label for="description">Description:</label><br>
+         <input type="textarea" id="description" name="description"><br>
+         <label for="imageUrl">Book image url:</label><br>
+         <input type="url" id="imageUrl" name="imageUrl"><br>
+         <input type="hidden" id="checkoutStatus" name="checkoutStatus" value="false"><br>
+         <input type="submit" value="Add Record">
+         <input type="reset" value="Clear">
+      </form>
+   </div>
