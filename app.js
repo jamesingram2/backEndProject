@@ -10,7 +10,9 @@ const mongoose = require("mongoose");
 // Routes
 const indexRouter = require("./routes/index");
 const authRouter = require("./routes/auth");
-const staffRouter = require("./routes/staff");
+const borrowerRouter = require("./routes/borrower");
+const recordRouter = require("./routes/record");
+const tasksRouter = require("./routes/tasks");
 
 const app = express();
 
@@ -47,7 +49,9 @@ app.use(express.static(path.join(__dirname, "public")));
 // Use routers
 app.use("/", indexRouter);
 app.use("/", authRouter);
-app.use("/staff", staffRouter);
+app.use("/staff/borrower", borrowerRouter);
+app.use("/staff/record", recordRouter);
+app.use("/staff/tasks", tasksRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

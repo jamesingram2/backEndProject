@@ -37,6 +37,9 @@ const RecordSchema = new mongoose.Schema({
       type: Boolean,
       required: true,
    },
+   dueDate: {
+      type: String,
+   },
 });
 
 const Record = mongoose.model("Record", RecordSchema);

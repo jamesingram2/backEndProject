@@ -1,10 +1,28 @@
-<div class="borrower">
-   <p>Card number: {{cardNumber}}</p>
-   <p>Name: {{fname}} {{minit}} {{lname}}</p>
-   <p>Address: {{add1}} {{add2}}</p>
-   <p>City, State, Zip: {{city}}, {{state}} {{zip}}</p>
-   <p>Phone: {{phone}}</p>
-   <p>Email: {{email}}</p>
-   <p>Checked out items: {{record}}</p>
-   <hr>
+<div class="wrapper">
+    <div class="text-center mt-4 name">Borrower Details</div>
+    <form class="p-3 mt-3">
+      Card number:
+      <div class="form-field d-flex align-items-center"> <input value='{{borrower.cardNumber}}' disabled></div>
+      Name:
+      <div class="form-field d-flex align-items-center"><input value='{{borrower.fname}} {{borrower.minit}} {{borrower.lname}}' disabled></div>
+      Address:
+      <div class="form-field d-flex align-items-center"><input value='{{borrower.add1}} {{borrower.add2}}' disabled></div>
+      City, State, Zip:
+      <div class="form-field d-flex align-items-center"><input value='{{borrower.city}}, {{borrower.state}} {{borrower.zip}}' disabled></div>
+      Phone:
+      <div class="form-field d-flex align-items-center"><input value='{{borrower.phone}}' disabled></div>
+      Email:
+      <div class="form-field d-flex align-items-center"><input value='{{borrower.email}}' disabled></div>
+      Checked out items:
+      {{#if borrower.records.length}}
+        {{#each borrower.records}}
+          <div class="form-field d-flex align-items-center"><input value='Item ID: {{this}}' disabled></div>
+        {{/each}}
+      {{else}}
+        <div class="form-field d-flex align-items-center"><input value='No Items Checked Out' disabled></div>
+      {{/if}}
+      <button type="button" class="btn mt-3"><a href="/staff/borrower/editBorrower{{borrower._id}}">Update</a></button>
+      <button type="button" class="btn mt-3"><a href="/staff/borrower/deleteBorrower{{borrower._id}}">Delete</a></button>
+      <button type="button" class="btn mt-3"><a href="/staff/borrower/viewBorrower">Close</a></button>
+    </form>
 </div>

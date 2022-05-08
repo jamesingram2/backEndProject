@@ -1,0 +1,10 @@
+<div class="wrapper">
+   <div class="text-center mt-4 name">Delete Record</div>
+   <form action="/staff/record/deleteRecord{{record._id}}" method="POST" class="p-3 mt-3">
+   <label for="recordId">Delete Record:</label>
+   <div class="form-field d-flex align-items-center">
+      <input type="text" id="recordId" name="recordId" value={{record.recordId}} disabled></div>
+      <button type="submit" class="btn mt-3">Delete</button>
+      <button type="btn" class="btn mt-3"><a href="/staff/record/viewRecord">Cancel</a></button>
+   </form>
+</div>

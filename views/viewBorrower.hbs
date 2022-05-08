@@ -1,9 +1,10 @@
-<h1>View Borrower Info</h1>
-<div class="form">
-   <form action="/staff/borrowerDetails" method="GET">
-      <label for="cardNumber">Enter Borrower's Card Number:</label><br>
-      <input type="text" id="cardNumber" name="cardNumber"><br>
-      <input type="submit" value="View">
-      <input type="reset" value="clear">
+<div class="wrapper">
+   <div class="text-center mt-4 name">View Borrower</div>
+   <form action="/staff/borrower/borrowerDetails" method="GET" class="p-3 mt-3">
+      <div class="form-field d-flex align-items-center">
+         <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number" class="cardNumber">
+      </div>
+      <button type="submit" class="btn mt-3">View</button>
+      <button type="reset" class="btn mt-3">Clear</button>
    </form>
 </div>

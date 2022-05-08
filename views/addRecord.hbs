@@ -1,24 +1,25 @@
-<h1>Add a Record</h1>
-   <div class="form">
-      <form action="/staff/addRecord" method="POST">
-         <label for="recordId">Record number:</label><br>
-         <input type="text" id="recordId" name="recordId"><br>
-         <label for="title">Title:</label><br>
-         <input type="text" id="title" name="title"><br>
-         <label for="author">Author:</label><br>
-         <input type="text" id="author" name="author"><br>
-         <label for="subject">Subject:</label><br>
-         <input type="text" id="subject" name="subject"><br>
-         <label for="format">Format:</label><br>
-         <input type="text" id="format" name="format"><br>
-         <label for="classification">Classification:</label><br>
-         <input type="text" id="classification" name="classification"><br>
-         <label for="description">Description:</label><br>
-         <input type="textarea" id="description" name="description"><br>
-         <label for="imageUrl">Book image url:</label><br>
-         <input type="url" id="imageUrl" name="imageUrl"><br>
-         <input type="hidden" id="checkoutStatus" name="checkoutStatus" value="false"><br>
-         <input type="submit" value="Add Record">
-         <input type="reset" value="Clear">
+<div class="wrapper">
+      <div class="text-center mt-4 name">Add a Record</div>
+      <form action="/staff/record/addRecord" method="POST" class="p-3 mt-3">
+         <div class="form-field d-flex align-items-center">
+         <input type="text" id="recordId" name="recordId" placeholder="Record ID"></div>
+         <div class="form-field d-flex align-items-center">
+         <input type="text" id="title" name="title" placeholder="Title"></div>
+         <div class="form-field d-flex align-items-center">
+         <input type="text" id="author" name="author" placeholder="Author"></div>
+         <div class="form-field d-flex align-items-center">
+         <input type="text" id="subject" name="subject" placeholder="Subject"></div>
+         <div class="form-field d-flex align-items-center">
+         <input type="text" id="format" name="format" placeholder="Format"></div>
+         <div class="form-field d-flex align-items-center">
+         <input type="text" id="classification" name="classification" placeholder="Classification"></div>
+         <div class="form-field d-flex align-items-center">
+         <input type="text" id="description" name="description" placeholder="Description"></div>
+         <div class="form-field d-flex align-items-center">
+         <input type="url" id="imageUrl" name="imageUrl" placeholder="Image URL"></div>
+         <input type="hidden" id="checkoutStatus" name="checkoutStatus" value="false">
+         <input type="hidden" id="dueDate" name="dueDate" value="null">
+         <button type="submit" class="btn mt-3">Add record</button>
+         <button type="reset" class="btn mt-3">Clear</button>
       </form>
    </div>

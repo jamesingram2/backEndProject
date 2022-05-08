@@ -1,0 +1,26 @@
+<div class="wrapper">
+   <div class="text-center mt-4 name">Record Details</div>
+   <form class="p-3 mt-3">
+      Record ID:
+      <div class="form-field d-flex align-items-center"><input value='{{record.recordId}}' disabled></div>
+      Title:
+      <div class="form-field d-flex align-items-center"><input value='{{record.title}}' disabled></div>
+      Author:
+      <div class="form-field d-flex align-items-center"><input value='{{record.author}}' disabled></div>
+      Subject:
+      <div class="form-field d-flex align-items-center"><input value='{{record.subject}}' disabled></div>
+      Format:
+      <div class="form-field d-flex align-items-center"><input value='{{record.format}}' disabled></div>
+      Classification:
+      <div class="form-field d-flex align-items-center"><input value='{{record.classification}}' disabled></div>
+      Description:
+      <div class="form-field d-flex align-items-center"><input value='{{record.description}}' disabled></div>
+      Image URL:
+      <div class="form-field d-flex align-items-center"><input value='{{record.imageUrl}}' disabled></div>
+      Checked Out:
+      <div class="form-field d-flex align-items-center"><input value={{record.checkoutStatus}} disabled></div>
+      <button type="button" class="btn mt-3"><a href="/staff/record/editrecord{{record._id}}">Update</a></button>
+      <button type="button" class="btn mt-3"><a href="/staff/record/deleteRecord{{record._id}}">Delete</a></button>
+      <button type="button" class="btn mt-3"><a href="/staff/record/viewRecord">Close</a></button>
+   </form>
+</div>

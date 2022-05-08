@@ -1,0 +1,40 @@
+<div class="wrapper">
+   <div class="text-center mt-4 name">Edit Borrower</div>
+   <form action="/staff/borrower/editBorrower{{borrower._id}}" method="POST" class="p-3 mt-3">
+      <label for="cardNumber">Card number:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="cardNumber" name="cardNumber" value='{{borrower.cardNumber}}'></div>
+      <label for="fname">First name:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="fname" name="fname" value='{{borrower.fname}}'></div>
+      <label for="minit">Middle initial:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="minit" name="minit" value='{{borrower.minit}}'></div>
+      <label for="lname">Last name:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="lname" name="lname" value='{{borrower.lname}}'></div>
+      <label for="add1">Street address:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="add1" name="add1" value='{{borrower.add1}}'></div>
+      <label for="add2">Apt, number, etc:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="add2" name="add2" value='{{borrower.add2}}'></div>
+      <label for="city">City:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="city" name="city" value='{{borrower.city}}'></div>
+      <label for="state">State:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="state" name="state" value='{{borrower.state}}'></div>
+      <label for="zip">Zip::</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="zip" name="zip" value='{{borrower.zip}}'></div>
+      <label for="phone">Phone number:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="tel" id="phone" name="phone" value='{{borrower.phone}}'></div>
+      <label for="email">Email address:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="email" id="email" name="email" value='{{borrower.email}}'></div>
+      <button type="submit" class="btn mt-3">Edit</button>
+      <button type="btn" class="btn mt-3"><a href="/staff/borrower/viewBorrower">Cancel</a></button>
+   </form>
+</div>

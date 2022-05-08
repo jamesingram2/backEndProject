@@ -1,0 +1,10 @@
+<div class="wrapper">
+   <div class="text-center mt-4 name">Delete Borrower</div>
+   <form action="/staff/borrower/deleteBorrower{{borrower._id}}" method="POST" class="p-3 mt-3">
+   <label for="cardNumber">Delete Borrower:</label>
+   <div class="form-field d-flex align-items-center">
+      <input type="text" id="cardNumber" name="cardNumber" value={{borrower.cardNumber}} disabled></div>
+      <button type="submit" class="btn mt-3">Delete</button>
+      <button type="btn" class="btn mt-3"><a href="/staff/borrower/viewBorrower">Cancel</a></button>
+   </form>
+</div>
