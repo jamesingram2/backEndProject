@@ -1,13 +1,53 @@
 <header>
-   My Library
-   <ul>
-      <li><a href="/">Catalog</a></li>
-      {{#if isLoggedIn}}
-      <li><a href="/staff">Operations</a></li>
-      <li><a href="/logout">Logout</a></li>
-      {{else}}
-      <li><a href="/about">About</a></li>
-      <li><a href="/login">Staff Login</a></li>
-      {{/if}}
-   </ul>
+    <!--Navbar-->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+         <a class="navbar-brand" href="#"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimages%2Flibrary-icon-png-36.png&f=1&nofb=1"> My Library App</a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+               <a class="nav-link" href="/"><i class="bi bi-house-door-fill"></i> Catalog</a>
+            </li>
+            {{#if isLoggedIn}}
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-list-task"></i> Common Tasks</a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <h6>Common tasks</h6>
+                  <li><a class="dropdown-item" href="/staff/tasks/checkout">Checkout Item</a></li>
+                  <li><a class="dropdown-item" href="/staff/tasks/discharge">Discharge Item</a></li>
+               </ul>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-book-fill"></i> Records</a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <h6>Records</h6>
+                  <li><a class="dropdown-item" href="/staff/record/viewRecord">View Record</a></li>
+                  <li><a class="dropdown-item" href="/staff/record/addRecord">Add Record</a></li>
+               </ul>
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i> Borrowers</a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <h6>Borrowers</h6>
+                  <li><a class="dropdown-item" href="/staff/borrower/viewBorrower">View Borrower</a></li>
+                  <li><a class="dropdown-item" href="/staff/borrower/register">Add Borrower</a></li>
+               </ul>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="/logout"><i class="bi bi-lock-fill"></i> Logout</a> 
+            </li>
+            {{else}}
+            <li class="nav-item">
+               <a class="nav-link" href="/about"><i class="bi bi-info-circle-fill"></i> About</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="/login"><i class="bi bi-lock-fill"></i> Staff Login</a> 
+            </li>
+            {{/if}}
+         </div>
+      </div>
+   </nav>
 </header>

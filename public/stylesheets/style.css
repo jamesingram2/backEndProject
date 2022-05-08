@@ -1,8 +1,143 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif
 }
 
-a {
-  color: #00B7FF;
+body {
+   background: #ecf0f3
+}
+
+.navbar {
+   margin: 0 auto 20px;
+   width: 100%;
+}
+
+.navbar-brand {
+   text-shadow: 2px 2px 5px #021a31;
+   font-size: 30px;
+   line-height: 30px;
+   margin-right: 25px;
+}
+
+.navbar-brand img {
+   height: 40px;
+   margin-top: -8px;
+   margin-right: 5px;
+}
+
+.dropdown-menu h6 {
+   margin-left: 10px;
+}
+
+#carousel {
+   width: 75%;
+   margin: 0 auto;
+}
+
+.searchbar {
+   margin-top: 15px;
+   margin-bottom: 15px;
+   font-size: 16px;
+}
+
+.searchbar input {
+   font-size: 18px;
+   padding-left: 10px;
+   margin-right: 10px;
+   box-shadow: 1px 1px 10px #a7aaa7;
+}
+
+#advancedSearch {
+   margin: 10px;
+}
+
+.collection {
+   margin-top: 15px;
+}
+
+.wrapper {
+   max-width: 500px;
+   min-height: 500px;
+   margin: 80px auto;
+   padding: 30px;
+   background-color: #ecf0f3;
+   border-radius: 15px;
+   box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+.wrapper img {
+   max-width: 250px;
+}
+
+.logo {
+   width: 80px;
+   margin: auto
+}
+
+.logo img {
+   width: 100%;
+   height: 80px;
+   object-fit: cover;
+   border-radius: 50%;
+   box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff
+}
+
+.wrapper .name {
+   font-weight: 600;
+   font-size: 1.4rem;
+   letter-spacing: 1.3px;
+   padding-left: 10px;
+   color: #555
+}
+
+.wrapper .form-field input {
+   width: 100%;
+   display: block;
+   border: none;
+   outline: none;
+   background: none;
+   font-size: 1.2rem;
+   color: #666;
+   padding: 10px 15px 10px 10px
+}
+
+.wrapper .form-field {
+   padding-left: 10px;
+   margin-bottom: 20px;
+   border-radius: 20px;
+   box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff
+}
+
+.wrapper .form-field .fas {
+   color: #555
+}
+
+.wrapper .btn {
+   box-shadow: none;
+   width: 100%;
+   height: 40px;
+   background-color: #03A9F4;
+   color: #fff;
+   border-radius: 25px;
+   box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+   letter-spacing: 1.3px;
+}
+
+.wrapper .btn:hover {
+   background-color: #039BE5
+}
+
+.wrapper a {
+   text-decoration: none;
+   color: #fff;
+}
+
+@media(max-width: 380px) {
+   .wrapper {
+       margin: 30px 20px;
+       padding: 40px 15px 15px 15px
+   }
 }

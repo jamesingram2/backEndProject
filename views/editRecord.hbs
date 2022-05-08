@@ -1,0 +1,33 @@
+<div class="wrapper">
+   <div class="text-center mt-4 name">Edit Record</div>
+   <form action="/staff/record/editRecord{{record._id}}" method="POST" class="p-3 mt-3">
+      <label for="recordId">Record ID::</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="recordId" name="recordId" value='{{record.recordId}}'></div>
+      <label for="title">Title::</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="title" name="title" value='{{record.title}}'></div>
+      <label for="author">Author:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="author" name="author" value='{{record.author}}'></div>
+      <label for="subject">Subject:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="subject" name="subject" value='{{record.subject}}'></div>
+      <label for="format">Format:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="format" name="format" value='{{record.format}}'></div>
+      <label for="classification">Classification:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="classification" name="classification" value='{{record.classification}}'></div>
+      <label for="description">Description:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="description" name="description" value='{{record.description}}'></div>
+      <label for="imageUrl">Image URL:</label>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="imageUrl" name="imageUrl" value='{{record.imageUrl}}'></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="hidden" id="checkoutStatus" name="checkoutStatus" value='{{record.checkoutStatus}}'></div>
+      <button type="submit" class="btn mt-3">Edit</button>
+      <button type="btn" class="btn mt-3"><a href="/staff/record/viewRecord">Cancel</a></button>
+   </form>
+</div>

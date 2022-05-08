@@ -1,5 +1,30 @@
-<h1>Library App</h1>
-<h2>Browse the Catalog</h2>
-{{#each records}}
-{{> record}}
-{{/each}}
+<!--Search bar-->
+<div class="searchbar">
+<form action="/search" method="GET">
+   <div class="input-group rounded">
+      <input type="search" class="form-control rounded" name="search" placeholder="Search the catalog">
+      <input type="submit" value="search" class="btn"><a class="text-primary" href="#" id="advancedSearch">
+         Advanced Search</a>
+   </div>
+</form>
+</div>
+<!--Carousel-->
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+   <div class="carousel-inner">
+      <div class="carousel-item active">
+         <img src="https://images.unsplash.com/photo-1553447977-754f9430685c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100 mx-auto" alt="...">
+      </div>
+      <div class="carousel-item">
+         <img src="https://images.unsplash.com/photo-1514894780887-121968d00567?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1746&q=80" class="d-block w-100 mx-auto" alt="...">
+      </div>
+      <div class="carousel-item">
+         <img src="https://images.unsplash.com/photo-1607473128892-d7c8cd439cc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" class="d-block w-100 mx-auto" alt="...">
+      </div>
+   </div>
+</div>
+<div class="collection">
+   <h3>Browse the Catalog</h3>
+   {{#each records}}
+   {{> record}}
+   {{/each}}
+</div>

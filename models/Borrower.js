@@ -8,10 +8,6 @@ const BorrowerSchema = new mongoose.Schema({
       required: true,
       unique: true,
    },
-   pin: {
-      type: String,
-      required: true,
-   },
    fname: {
       type: String,
       required: true,
@@ -21,10 +17,6 @@ const BorrowerSchema = new mongoose.Schema({
    },
    lname: {
       type: String,
-      required: true,
-   },
-   dob: {
-      type: Date,
       required: true,
    },
    add1: {
@@ -53,7 +45,7 @@ const BorrowerSchema = new mongoose.Schema({
    email: {
       type: String,
    },
-   records: [{ type: "ObjectId", ref: "Record" }],
+   records: [{ type: Schema.Types.ObjectId, ref: "Record" }],
 });
 
 const Borrower = mongoose.model("Borrower", BorrowerSchema);

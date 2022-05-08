@@ -1,33 +1,29 @@
-<h1>Register a Borrower</h1>
-   <div class="form">
-      <form action="/staff/register" method="POST">
-         <label for="cardNumber">Card number:</label><br>
-         <input type="text" id="cardNumber" name="cardNumber"><br>
-         <label for="pin">PIN/Password:</label><br>
-         <input type="password" id="pin" name="pin"><br>
-         <label for="fname">First name:</label><br>
-         <input type="text" id="fname" name="fname"><br>
-         <label for="minit">Middle initial:</label><br>
-         <input type="text" id="minit" name="minit"><br>
-         <label for="lname">Last name:</label><br>
-         <input type="text" id="lname" name="lname"><br>
-         <label for="dob">DOB:</label><br>
-         <input type="date" id="dob" name="dob"><br>
-         <label for="add1">Street address:</label><br>
-         <input type="text" id="add1" name="add1"><br>
-         <label for="add2">Apt, number, etc:</label><br>
-         <input type="text" id="add2" name="add2"><br>
-         <label for="city">City:</label><br>
-         <input type="text" id="city" name="city"><br>
-         <label for="state">State:</label><br>
-         <input type="text" id="state" name="state"><br>
-         <label for="zip">Zip::</label><br>
-         <input type="text" id="zip" name="zip"><br>
-         <label for="phone">Phone number:</label><br>
-         <input type="tel" id="phone" name="phone"><br>
-         <label for="email">Email address:</label><br>
-         <input type="email" id="email" name="email"><br><br>
-         <input type="submit" value="Register">
-         <input type="reset" value="Clear">
-      </form>
-   </div>
+<div class="wrapper">
+   <div class="text-center mt-4 name">Register Borrower</div>
+   <form action="/staff/borrower/register" method="POST" class="p-3 mt-3">
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="cardNumber" name="cardNumber" placeholder="Card number"></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="fname" name="fname" placeholder="First name"></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="minit" name="minit" placeholder="Middle initial"></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="lname" name="lname" placeholder="Last name"></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="add1" name="add1" placeholder="Address 1"></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="add2" name="add2" placeholder="Address 2"></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="city" name="city" placeholder="City"></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="state" name="state" placeholder="State"></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="text" id="zip" name="zip" placeholder="Zip code"></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="tel" id="phone" name="phone" placeholder="Phone number"></div>
+      <div class="form-field d-flex align-items-center">
+      <input type="email" id="email" name="email" placeholder="Email address"></div>
+      <button type="submit" class="btn mt-3">Register</button>
+      <buton type="reset" class="btn mt-3">Clear</buton>
+   </form>
+</div>
