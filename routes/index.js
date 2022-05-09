@@ -9,6 +9,27 @@ router.get("/", userStatus, async (req, res) => {
    res.render("index", { title: "Home", isLoggedIn: req.isLoggedIn, records });
 });
 
+// GET search page
+router.get("/search", userStatus, async (req, res) => {
+   if (!req.query.search) {
+      records = await Record.find().lean();
+   } else {
+      let searchStr = req.query.search;
+      const regex = new RegExp(searchStr, "i");
+      records = await Record.find({
+         $or: [
+            { title: { $regex: regex } },
+            { author: { $regex: regex } },
+            { subject: { $regex: regex } },
+            { format: { $regex: regex } },
+            { classification: { $regex: regex } },
+            { description: { $regex: regex } },
+         ],
+      }).lean();
+   }
+   res.render("index", { isLoggedIn: req.isLoggedIn, records });
+});
+
 // GET about page
 router.get("/about", userStatus, (req, res) => {
    res.render("about", { title: "About", isLoggedIn: req.isLoggedIn });

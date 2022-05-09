@@ -3,8 +3,7 @@
 <form action="/search" method="GET">
    <div class="input-group rounded">
       <input type="search" class="form-control rounded" name="search" placeholder="Search the catalog">
-      <input type="submit" value="search" class="btn"><a class="text-primary" href="#" id="advancedSearch">
-         Advanced Search</a>
+      <input type="submit" value="Search" class="btn btn-primary">
    </div>
 </form>
 </div>
@@ -24,7 +23,9 @@
 </div>
 <div class="collection">
    <h3>Browse the Catalog</h3>
-   {{#each records}}
-   {{> record}}
-   {{/each}}
+   <div class="row">
+      {{#each records}}
+      {{> record}}
+      {{/each}}
+   </div>
 </div>

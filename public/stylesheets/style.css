@@ -8,7 +8,7 @@
 }
 
 body {
-   background: #ecf0f3
+   background: #ecf0f3;
 }
 
 .navbar {
@@ -56,20 +56,26 @@ body {
 }
 
 .collection {
-   margin-top: 15px;
+   margin-top: 25px;
+}
+
+.collection h3 {
+   margin-top: 25px;
+   margin-bottom: -25px;
 }
 
 .wrapper {
    max-width: 500px;
-   min-height: 500px;
-   margin: 80px auto;
+   min-height: 300px;
+   margin: 60px auto;
    padding: 30px;
    background-color: #ecf0f3;
    border-radius: 15px;
    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
 }
 .wrapper img {
-   max-width: 250px;
+   width: 150px;
+   height: 200px;
 }
 
 .logo {
@@ -133,6 +139,15 @@ body {
 .wrapper a {
    text-decoration: none;
    color: #fff;
+}
+
+footer {
+   background-color: #0275d8;
+   color: #fff;
+   margin-top: 100px;
+   padding: 20px;
+   text-align: center;
+   width: 100%;
 }
 
 @media(max-width: 380px) {
