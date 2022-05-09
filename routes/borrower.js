@@ -43,6 +43,7 @@ router.post("/register", authAccess, userStatus, async (req, res) => {
       email: req.body.email,
       records: [],
    });
+
    await newBorrower.save((err) => {
       if (err) {
          console.log(err);

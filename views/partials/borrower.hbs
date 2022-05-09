@@ -16,7 +16,7 @@
       Checked out items:
       {{#if borrower.records.length}}
         {{#each borrower.records}}
-          <div class="form-field d-flex align-items-center"><input value='Item ID: {{this}}' disabled></div>
+          <div class="form-field d-flex align-items-center"><input value='Item: {{this}}' disabled></div>
         {{/each}}
       {{else}}
         <div class="form-field d-flex align-items-center"><input value='No Items Checked Out' disabled></div>

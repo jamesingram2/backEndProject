@@ -14,7 +14,7 @@ router.get("/register", userStatus, (req, res) => {
 
 // POST registration page
 router.post("/register", async (req, res) => {
-   const { username, password, repeatPassword } = req.body;
+   const { username, password, repeatPassword, fname, lname, title } = req.body;
    if (password !== repeatPassword) {
       res.send("Passwords do not match");
    } else {
@@ -23,6 +23,9 @@ router.post("/register", async (req, res) => {
       const newUser = new User({
          username,
          password: hash,
+         fname,
+         lname,
+         title,
       });
       newUser.save((err) => {
          if (err) {

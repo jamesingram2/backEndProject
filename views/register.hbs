@@ -1,9 +1,49 @@
-<h1>Register Form</h1>
-<div class="form">
-  <form action='/register' method="POST">
-      <input type="text" id="username" name="username" placeholder="enter username">
-      <input type="password" id="password" name="password" placeholder="password">
-      <input type="password" id="repeatPassword" name="repeatPassword" placeholder="verify password">
-      <input type="submit" value="Register">
-  </form>
+<div class="wrapper">
+   <div class="text-center mt-4 name">Register Staff Profile</div>
+   <form action="/register" method="POST" class="p-3 mt-3">
+      <div class="form-field d-flex align-items-center">
+         <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+         /></div>
+      <div class="form-field d-flex align-items-center">
+         <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+         /></div>
+      <div class="form-field d-flex align-items-center">
+         <input
+            type="password"
+            id="repeatPassword"
+            name="repeatPassword"
+            placeholder="Verify password"
+         /></div>
+      <div class="form-field d-flex align-items-center">
+         <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="First name"
+         /></div>
+      <div class="form-field d-flex align-items-center">
+         <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Last name"
+         /></div>
+      <div class="form-field d-flex align-items-center">
+         <input 
+            type="text" 
+            id="title" 
+            name="title" 
+            placeholder="Title" 
+          /></div>
+      <button type="submit" class="btn mt-3">Register</button>
+      <button type="reset" class="btn mt-3">Clear</button>
+   </form>
 </div>
