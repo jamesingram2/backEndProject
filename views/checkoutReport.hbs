@@ -1,0 +1,18 @@
+<h2 class="print">Checked Out Items Report <button class="btn btn-outline-secondary" onclick="window.print();return false;"><i class="bi bi-printer"></i></button></h2>
+<table class="table table-striped table-responsive print">
+  <thead>
+    <tr>
+      <th scope="col">Record ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Format</th>
+      <th scope="col">Classification</th>
+      <th scope="col">Due Date:</th>
+    </tr>
+  </thead>
+  <tbody>
+   {{#each report}}
+      {{> checkoutReport}}
+   {{/each}}
+  </tbody>
+</table>

@@ -150,6 +150,8 @@ footer {
    width: 100%;
 }
 
+
+
 @media(max-width: 380px) {
    .wrapper {
        margin: 30px 20px;

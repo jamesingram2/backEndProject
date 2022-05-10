@@ -13,6 +13,7 @@ const authRouter = require("./routes/auth");
 const borrowerRouter = require("./routes/borrower");
 const recordRouter = require("./routes/record");
 const tasksRouter = require("./routes/tasks");
+const reportsRouter = require("./routes/reports");
 
 const app = express();
 
@@ -52,6 +53,7 @@ app.use("/", authRouter);
 app.use("/staff/borrower", borrowerRouter);
 app.use("/staff/record", recordRouter);
 app.use("/staff/tasks", tasksRouter);
+app.use("/staff/reports", reportsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

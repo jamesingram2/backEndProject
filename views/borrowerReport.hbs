@@ -1,0 +1,17 @@
+<h2 class="print">Borrowers Report <button class="btn btn-outline-secondary" onclick="window.print();return false;"><i class="bi bi-printer"></i></button></h2>
+<table class="table table-striped table-responsive print">
+  <thead>
+    <tr>
+      <th scope="col">Card Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
+      <th scope="col">Checked Out Items</th>
+    </tr>
+  </thead>
+  <tbody>
+   {{#each report}}
+      {{> borrowerReport}}
+   {{/each}}
+  </tbody>
+</table>
