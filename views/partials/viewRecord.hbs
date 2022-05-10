@@ -17,8 +17,14 @@
       <div class="form-field d-flex align-items-center"><input value='{{record.description}}' disabled></div>
       Image URL:
       <div class="form-field d-flex align-items-center"><input value='{{record.imageUrl}}' disabled></div>
-      Checked Out:
+      Checked Out?
       <div class="form-field d-flex align-items-center"><input value={{record.checkoutStatus}} disabled></div>
+      {{#if record.checkoutStatus}}
+         Due Date:
+         <div class="form-field d-flex align-items-center"><input value={{record.dueDate}} disabled></div>
+         Borrower:
+         <div class="form-field d-flex align-items-center"><input value={{record.borrower}} disabled></div>
+      {{/if}}
       <button type="button" class="btn mt-3"><a href="/staff/record/editrecord{{record._id}}">Update</a></button>
       <button type="button" class="btn mt-3"><a href="/staff/record/deleteRecord{{record._id}}">Delete</a></button>
       <button type="button" class="btn mt-3"><a href="/staff/record/viewRecord">Close</a></button>

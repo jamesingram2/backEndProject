@@ -5,14 +5,14 @@ const Record = require("../models/Record");
 
 // GET home page
 router.get("/", userStatus, async (req, res) => {
-   const records = await Record.find().lean();
+   const records = await Record.find().lean().sort({ recordId: "asc" });
    res.render("index", { title: "Home", isLoggedIn: req.isLoggedIn, records });
 });
 
 // GET search page
 router.get("/search", userStatus, async (req, res) => {
    if (!req.query.search) {
-      records = await Record.find().lean();
+      records = await Record.find().lean().sort({ recordId: "asc" });
    } else {
       let searchStr = req.query.search;
       const regex = new RegExp(searchStr, "i");

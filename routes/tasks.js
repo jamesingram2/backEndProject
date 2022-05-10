@@ -27,10 +27,18 @@ router.post("/checkout", authAccess, userStatus, async (req, res) => {
    await Record.findByIdAndUpdate(item._id, {
       checkoutStatus: true,
       dueDate: dueDate,
+      borrower: user._id,
    }).lean();
    await Borrower.findByIdAndUpdate(user._id, {
       $addToSet: {
-         records: item._id,
+         records: {
+            _id: item._id,
+            recordId: item.recordId,
+            title: item.title,
+            author: item.author,
+            format: item.format,
+            dueDate: item.dueDate,
+         },
       },
    })
       .populate("records")

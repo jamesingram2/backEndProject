@@ -40,6 +40,7 @@ const RecordSchema = new mongoose.Schema({
    dueDate: {
       type: String,
    },
+   borrower: { type: Schema.Types.ObjectId, ref: "Borrower" },
 });
 
 const Record = mongoose.model("Record", RecordSchema);
