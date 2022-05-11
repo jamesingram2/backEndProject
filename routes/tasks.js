@@ -64,6 +64,7 @@ router.post("/discharge", authAccess, userStatus, async (req, res) => {
    await Record.findByIdAndUpdate(item._id, {
       checkoutStatus: false,
       dueDate: null,
+      borrower: null,
    }).lean();
    await Borrower.findByIdAndUpdate(user._id, {
       $pull: {
